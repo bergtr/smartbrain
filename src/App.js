@@ -49,6 +49,7 @@ class App extends Component {
     }
   }
 
+
   calculateFaceLocation = (data) => {
     const ClarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('InputImage')
@@ -80,7 +81,7 @@ class App extends Component {
 
   onRouteChange = (route) => {
     if (route === 'signOut'){
-      this.setState({isSignedIn: false})
+      this.setState({isSignedIn: false});
     } else if (route === 'home'){
       this.setState({isSignedIn: true})
     }
